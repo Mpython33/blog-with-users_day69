@@ -36,11 +36,11 @@
 
 
 <!--           Comments Area -->
-          #Load the CKEditor
+<!--          #Load the CKEditor-->
             {{ ckeditor.load() }}
-          #Configure it with the name of the form field from CommentForm
+<!--          #Configure it with the name of the form field from CommentForm-->
             {{ ckeditor.config(name='comment_text') }}
-          #Create the wtf quickform from CommentForm
+<!--          #Create the wtf quickform from CommentForm-->
             {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
           <div class="col-lg-8 col-md-10 mx-auto comment">
             {% for comment in post.comments: %}
